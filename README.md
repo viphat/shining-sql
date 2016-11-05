@@ -1,3 +1,8 @@
+### Description
+
+Pure ruby script to sync data from Production Database (MySQL, Postgres) to Reporting Database (MySQL, Postgres)
+
+Using **Sequel** (and its dependencies like ruby-mysql, pg...) to interact with Database.
 
 ### Options
 
@@ -26,14 +31,41 @@
 ### Sample JSON Schema File
 
 ```
-
-
-
+{
+  "from_ds": "50-mysql",
+  "from_table_name": "events",
+  "dest_ds": "48-redshift",
+  "dest_table_name": "public.pageviews",
+  "columns": [
+    {
+      "column_name": "ts",
+      "data_type": "bigint"
+    },
+    {
+      "column_name": "page",
+      "data_type": "varchar(15)",
+    },
+    {
+      "column_name": "user_id",
+      "data_type": "int",
+    }
+  ],
+  "indexes": [
+    { "columns": ["date_d"] },
+    { "columns": ["page", "user_id"] }
+  ]
+}
 ```
 
 ### To do list
 
-- Build Options Parser to read parameters from command line
-- Using ActiveRecord without Rails to connect to Source DB and Destination DB
-- Using ActiveRecord Migrations Without Rails to Read Schema from User (JSON File) or Read Schema from Source Table and Create Table in Destination DB (If needed)
-- Cron job to execute script
+- ~~Build Options Parser to read parameters from command line.~~
+- ~~Using Sequel to connect to source db and destination db.~~
+- ~~Using Sequel to read schema from source table.~~
+- Mapping data type from MySQL to Postgres and vice versa.
+- Using Sequel to read indexes from source Table.
+- Using Sequel to read schema from JSON File.
+- Using Sequel to create table in Destination db.
+- Execute query to export data from source table to CSV file.
+- Import data to destination table from CSV file.
+- Write what's happening to history log.

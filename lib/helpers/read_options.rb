@@ -8,6 +8,7 @@ module Helpers
       opt_parser = OptionParser.new do |opts|
         opts.banner = "Usage: shining_sql.rb [options]"
 
+        # SOURCE DB
         opts.on("-a", "--source-adapter SOURCE_ADAPTER", "Your Source Database Adapter", "mysql, postgres") do |value|
           unless ['mysql','postgres'].include?(value)
             puts 'Only Mysql or Postgres is accepted for destination Adapter'
@@ -36,6 +37,7 @@ module Helpers
           options.source_password = value
         end
 
+        # DESTINATION DB
         opts.on("-q", "--destination-adapter DESTINATION_ADAPTER", "Your Destination Database Adapter", "mysql, postgres") do |value|
           unless ['mysql','postgres'].include?(value)
             puts 'Only Mysql or Postgres is accepted for Destination Adapter'
@@ -64,6 +66,20 @@ module Helpers
           options.destination_password = value
         end
 
+        # Other Parameters
+        opts.on("-t", "--source-table-name SOURCE_TABLE_NAME", "Your Source Table Name", "Ex: table1") do |value|
+          options.source_table_name = value
+        end
+
+        opts.on("-r", "--destination-table-name DESTINATION_TABLE_NAME", "Destination Table Name", "Ex: public.table1") do |value|
+          options.destination_table_name = value
+        end
+
+        opts.on("-f", "--schema-file SCHEMA_FILE", "Your Schema File", "Ex: /path/to/table1-schema.json") do |value|
+          options.schema_file = value
+        end
+
+        # Help
         opts.on("-h", "--help", "Prints this help") do
           puts opts
           exit

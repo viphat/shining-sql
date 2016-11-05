@@ -1,39 +1,66 @@
-# Logfile created on 2016-11-05 07:58:22 +0700 by logger.rb/54362
-I, [2016-11-05T07:58:53.799443 #8688]  INFO -- : (0.000597s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:58:53.799679 #8688]  INFO -- : (0.000125s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:58:53.799828 #8688]  INFO -- : (0.000108s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:58:53.838030 #8688]  INFO -- : (0.038128s) select * from customers;
-I, [2016-11-05T07:58:57.540194 #8707]  INFO -- : (0.000306s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:58:57.540513 #8707]  INFO -- : (0.000214s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:58:57.540671 #8707]  INFO -- : (0.000114s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:58:57.541955 #8707]  INFO -- : (0.001224s) select * from customers;
-I, [2016-11-05T07:59:19.912726 #8740]  INFO -- : (0.000295s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:19.912958 #8740]  INFO -- : (0.000126s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:19.913098 #8740]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:59:25.564679 #8761]  INFO -- : (0.000261s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:25.564911 #8761]  INFO -- : (0.000116s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:25.565055 #8761]  INFO -- : (0.000102s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:59:36.768463 #8785]  INFO -- : (0.000306s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:36.768686 #8785]  INFO -- : (0.000114s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:36.768822 #8785]  INFO -- : (0.000097s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:59:41.339996 #8803]  INFO -- : (0.000270s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:41.340212 #8803]  INFO -- : (0.000108s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:41.340350 #8803]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:59:44.824336 #8818]  INFO -- : (0.000311s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:44.824596 #8818]  INFO -- : (0.000155s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:44.824743 #8818]  INFO -- : (0.000103s) SET DateStyle = 'ISO'
-I, [2016-11-05T07:59:54.323195 #8848]  INFO -- : (0.000306s) SET standard_conforming_strings = ON
-I, [2016-11-05T07:59:54.323463 #8848]  INFO -- : (0.000158s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T07:59:54.323605 #8848]  INFO -- : (0.000097s) SET DateStyle = 'ISO'
-I, [2016-11-05T14:12:39.675447 #1660]  INFO -- : (0.035252s) SET standard_conforming_strings = ON
-I, [2016-11-05T14:12:39.682954 #1660]  INFO -- : (0.006290s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T14:12:39.683445 #1660]  INFO -- : (0.000344s) SET DateStyle = 'ISO'
-I, [2016-11-05T14:12:39.689312 #1660]  INFO -- : (0.000294s) SET standard_conforming_strings = ON
-I, [2016-11-05T14:12:39.689532 #1660]  INFO -- : (0.000138s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T14:12:39.689721 #1660]  INFO -- : (0.000140s) SET DateStyle = 'ISO'
-I, [2016-11-05T14:21:19.639804 #2136]  INFO -- : (0.000269s) SET standard_conforming_strings = ON
-I, [2016-11-05T14:21:19.640041 #2136]  INFO -- : (0.000133s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T14:21:19.640208 #2136]  INFO -- : (0.000128s) SET DateStyle = 'ISO'
-I, [2016-11-05T14:21:19.644369 #2136]  INFO -- : (0.000254s) SET standard_conforming_strings = ON
-I, [2016-11-05T14:21:19.644556 #2136]  INFO -- : (0.000108s) SET client_min_messages = 'WARNING'
-I, [2016-11-05T14:21:19.644689 #2136]  INFO -- : (0.000096s) SET DateStyle = 'ISO'
+
+I, [2016-11-05T14:37:00.223803 #3038]  INFO -- : (0.000547s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:37:00.224036 #3038]  INFO -- : (0.000129s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:37:00.224196 #3038]  INFO -- : (0.000121s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:37:00.288538 #3038]  INFO -- : (0.063962s) SELECT NULL AS "nil" FROM "customers" LIMIT 1
+I, [2016-11-05T14:37:56.733367 #3122]  INFO -- : (0.000483s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:37:56.733990 #3122]  INFO -- : (0.000263s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:37:56.734222 #3122]  INFO -- : (0.000158s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:37:58.415519 #3140]  INFO -- : (0.000251s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:37:58.415751 #3140]  INFO -- : (0.000128s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:37:58.415910 #3140]  INFO -- : (0.000120s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:38:08.043244 #3161]  INFO -- : (0.000293s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:38:08.043547 #3161]  INFO -- : (0.000193s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:38:08.043714 #3161]  INFO -- : (0.000128s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:38:08.045265 #3161]  INFO -- : (0.001201s) SELECT NULL AS "nil" FROM "customers" LIMIT 1
+I, [2016-11-05T14:44:05.375286 #3399]  INFO -- : (0.000454s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:44:05.375613 #3399]  INFO -- : (0.000176s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:44:05.375910 #3399]  INFO -- : (0.000247s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:44:20.588789 #3434]  INFO -- : (0.000247s) SET standard_conforming_strings = ON
+I, [2016-11-05T14:44:20.589028 #3434]  INFO -- : (0.000131s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T14:44:20.589189 #3434]  INFO -- : (0.000121s) SET DateStyle = 'ISO'
+I, [2016-11-05T14:44:20.590848 #3434]  INFO -- : (0.001257s) SELECT NULL AS "nil" FROM "customers" LIMIT 1
+I, [2016-11-05T14:44:20.630331 #3434]  INFO -- : (0.038172s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"customers"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T15:09:20.307486 #4401]  INFO -- : (0.000276s) SET standard_conforming_strings = ON
+I, [2016-11-05T15:09:20.307947 #4401]  INFO -- : (0.000150s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T15:09:20.308145 #4401]  INFO -- : (0.000144s) SET DateStyle = 'ISO'
+I, [2016-11-05T15:09:43.933264 #4430]  INFO -- : (0.000297s) SET standard_conforming_strings = ON
+I, [2016-11-05T15:09:43.933517 #4430]  INFO -- : (0.000151s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T15:09:43.933689 #4430]  INFO -- : (0.000130s) SET DateStyle = 'ISO'
+I, [2016-11-05T15:09:43.935871 #4430]  INFO -- : (0.001851s) SELECT NULL AS "nil" FROM "customers" LIMIT 1
+I, [2016-11-05T15:09:43.942709 #4430]  INFO -- : (0.005274s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"customers"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:01:26.422248 #5769]  INFO -- : (0.000347s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:01:26.422729 #5769]  INFO -- : (0.000147s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:01:26.422963 #5769]  INFO -- : (0.000168s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:01:26.449053 #5769]  INFO -- : (0.025642s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:01:26.453226 #5769]  INFO -- : (0.002911s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:01:36.532975 #5797]  INFO -- : (0.000381s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:01:36.533313 #5797]  INFO -- : (0.000184s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:01:36.533550 #5797]  INFO -- : (0.000143s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:01:36.535447 #5797]  INFO -- : (0.001395s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:01:36.541073 #5797]  INFO -- : (0.004195s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:09:10.198203 #6024]  INFO -- : (0.000255s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:09:10.198432 #6024]  INFO -- : (0.000129s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:09:10.198592 #6024]  INFO -- : (0.000121s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:09:10.200261 #6024]  INFO -- : (0.001256s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:09:10.204955 #6024]  INFO -- : (0.003492s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:09:48.225463 #6149]  INFO -- : (0.000347s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:09:48.226315 #6149]  INFO -- : (0.000705s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:09:48.226540 #6149]  INFO -- : (0.000148s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:09:48.228241 #6149]  INFO -- : (0.001294s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:09:48.232583 #6149]  INFO -- : (0.003129s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:10:18.057678 #6230]  INFO -- : (0.000281s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:10:18.057925 #6230]  INFO -- : (0.000141s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:10:18.058102 #6230]  INFO -- : (0.000127s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:10:18.059680 #6230]  INFO -- : (0.001152s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:10:18.064417 #6230]  INFO -- : (0.003314s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:10:33.853266 #6277]  INFO -- : (0.000266s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:10:33.853503 #6277]  INFO -- : (0.000134s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:10:33.853680 #6277]  INFO -- : (0.000124s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:10:33.855435 #6277]  INFO -- : (0.001361s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:10:33.862134 #6277]  INFO -- : (0.005185s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:10:51.297536 #6330]  INFO -- : (0.000357s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:10:51.297808 #6330]  INFO -- : (0.000164s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:10:51.297990 #6330]  INFO -- : (0.000135s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:10:51.299550 #6330]  INFO -- : (0.001142s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:10:51.303909 #6330]  INFO -- : (0.003162s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
