@@ -7,30 +7,29 @@ Using **Sequel** (and its dependencies like ruby-mysql, pg...) to interact with 
 ### Options
 
 #### Source Database Related-Options
-- `-a` ~ `--source-adapter` - Source DB Adapter (MySQL, Postgres)
-- `-j` ~ `--source-host` - Source DB Host
-- `-p` ~ `--source-port` - Source DB Port
+- `-a` ~ `--source-adapter` - Source DB adapter (MySQL, Postgres)
+- `-j` ~ `--source-host` - Source DB host
+- `-p` ~ `--source-port` - Source DB port
 - `-d` ~ `--source-database` - Source DB name
-- `-u` ~ `--source-username` - Source DB Username
-- `-s` ~ `--source-password` - Source DB Password
+- `-u` ~ `--source-username` - Source DB username
+- `-s` ~ `--source-password` - Source DB password
 
 #### Destination Database Related-Options
-- `-q` ~ `--destination-adapter` - Destination DB Adapter (MySQL, Postgres)
-- `-k` ~ `--destination-host` - Destination DB Host
-- `-o` ~ `--destination-port` - Destination DB Port
+- `-q` ~ `--destination-adapter` - Destination DB adapter (MySQL, Postgres)
+- `-k` ~ `--destination-host` - Destination DB host
+- `-o` ~ `--destination-port` - Destination DB port
 - `-c` ~ `--destination-database` - Destination DB name
-- `-i` ~ `--destination-username` - Destination DB Username
-- `-x` ~ `--destination-password` - Destination DB Password
+- `-i` ~ `--destination-username` - Destination DB username
+- `-x` ~ `--destination-password` - Destination DB password
 
 #### Other parameters
-- `-f` ~ `--schema-file` - Schema File (JSON) - **Not Required**
-- `-t` ~ `--table-name` - Table name
-- `-e` ~ `--source-prefix` - Source DB Schema Prefix (If Source DB is Postgres) - **Not Required** - Default is *public*
-- `-r` ~ `--destination-prefix` - Destination DB Schema Prefix (If Destination DB is Postgres) - **Not Required** - Default is *dest*
+- `-f` ~ `--schema-file` - Schema file (JSON) - **Not Required**
+- `-t` ~ `--source-table-name` - Source table name
+- `-r` ~ `--destination-table-name` - Destination table name
 
 ### Sample JSON Schema File
 
-```
+``` json
 {
   "from_ds": "50-mysql",
   "from_table_name": "events",
@@ -55,6 +54,14 @@ Using **Sequel** (and its dependencies like ruby-mysql, pg...) to interact with 
     { "columns": ["page", "user_id"] }
   ]
 }
+```
+
+### Execute
+
+```
+
+ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user -q postgres -k localhost -o 5432 -c db2 -i user -t table1 -r table2
+
 ```
 
 ### To do list

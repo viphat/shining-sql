@@ -2,17 +2,6 @@ require 'json'
 Dir["./lib/**/*.rb"].each { |file| require file }
 
 OUTPUT_SCHEMAS_FOLDER = "./output/schemas/"
-# Print All Arguments
-# ARGV.each do |arg|
-#   puts "Argument: #{arg}"
-# end
-
-=begin
- ruby ./shining_sql.rb
- -t customers
- -a postgres -j localhost -p 5432 -d ut1022 -u viphat
- -q postgres -k localhost -o 5432 -c utalents -i viphat
-=end
 
 timestamp = Time.now.strftime("%Y%m%d%H%M")
 
@@ -48,11 +37,5 @@ File.open("#{OUTPUT_SCHEMAS_FOLDER}/#{options.source_table_name}-#{timestamp}.js
   f.write(JSON.pretty_generate(output_json_hash))
 end
 
-# des_connection_string = Helpers::ShiningSql.build_connection_string(
-#   options.destination_adapter, options.destination_host, options.destination_port,
-#   options.destination_database, options.destination_username, options.destination_password
-# )
-# puts des_connection_string
-#
 # DES_DB = Database::Connection.connect!(des_connection_string)
 # puts DES_DB.test_connection
