@@ -40,7 +40,7 @@ end
 
 check_table_exists.call(options.source_table_name)
 
-output_json_hash = Database::ReadTableSchema.read_columns(src_db, options, output_json_hash)
+output_json_hash = Database::ReadTableSchema.read_from_db(src_db, options, output_json_hash)
 
 File.open("#{OUTPUT_SCHEMAS_FOLDER}/#{options.source_table_name}-#{timestamp}.json", "w") do |f|
   f.write(JSON.pretty_generate(output_json_hash))

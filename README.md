@@ -58,10 +58,16 @@ Using **Sequel** (and its dependencies like ruby-mysql, pg...) to interact with 
 
 ### Execute
 
+**Source DB is MySQL and Destination DB is Postgres**
+
+```
+ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d db1 -u user1 -s password1 -q postgres -k localhost -o 5432 -c db2 -i user2 -x password2 -t table1 -r table2
 ```
 
-ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 123456 -q postgres -k localhost -o 5432 -c db2 -i user -t user -r table2
+**Source DB is Postgres and Destination DB is MySQL**
 
+```
+ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user1 -s password1 -q mysql -k localhost -o 3306 -c db2 -i user2 -x password2 -t table1 -r table2
 ```
 
 ### To do list
@@ -77,6 +83,6 @@ ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 12345
 - Import data to destination table from CSV file.
 - Write what's happening to history log.
 - Improving Data Mapping between MySQL/Postgres.
-  - Based on many scripts & documents such as: 
+  - Based on many scripts & documents such as:
     - https://github.com/AnatolyUss/FromMySqlToPostgreSql
     - https://dev.mysql.com/doc/workbench/en/wb-migration-database-postgresql-typemapping.html)
