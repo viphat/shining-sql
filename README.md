@@ -70,10 +70,13 @@ ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 12345
 - ~~Using Sequel to connect to source db and destination db.~~
 - ~~Using Sequel to read schema from source table.~~
 - ~~Mapping data type from MySQL to Postgres and vice versa.~~ (Need Improve)
-- Using Sequel to read indexes from source Table.
-- Using Sequel to read schema from JSON File.
+- Using Sequel to read indexes from source table.
+- Using Sequel to read schema from JSON file.
 - Using Sequel to create table in Destination db.
 - Execute query to export data from source table to CSV file.
 - Import data to destination table from CSV file.
 - Write what's happening to history log.
-- Improving Data Mapping between MySQL/Postgres. (Based on many scripts & documents such as: https://github.com/AnatolyUss/FromMySqlToPostgreSql)
+- Improving Data Mapping between MySQL/Postgres.
+  - Based on many scripts & documents such as: 
+    - https://github.com/AnatolyUss/FromMySqlToPostgreSql
+    - https://dev.mysql.com/doc/workbench/en/wb-migration-database-postgresql-typemapping.html)
