@@ -295,3 +295,284 @@ I, [2016-11-07T22:04:26.063995 #6393]  INFO -- : (0.001114s)
           t.relname,
           i.relname;
       
+I, [2016-11-07T22:33:24.741630 #7250]  INFO -- : (0.000557s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:33:24.742058 #7250]  INFO -- : (0.000111s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:33:24.742198 #7250]  INFO -- : (0.000096s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:33:24.743622 #7250]  INFO -- : (0.001089s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:33:24.747784 #7250]  INFO -- : (0.002851s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-07T22:33:24.750945 #7250]  INFO -- : (0.001432s) 
+        SELECT
+          t.relname AS table_name,
+          i.relname AS index_name,
+          array_to_string(array_agg(a.attname), ', ') AS column_names
+        FROM
+          pg_class t, pg_class i, pg_index ix, pg_attribute a
+        WHERE
+          t.oid = ix.indrelid
+          and i.oid = ix.indexrelid
+          and a.attrelid = t.oid
+          and a.attnum = ANY(ix.indkey)
+          and t.relkind = 'r'
+          and t.relname = 'franchisees'
+        GROUP BY
+          t.relname,
+          i.relname
+        ORDER BY
+          t.relname,
+          i.relname;
+      
+I, [2016-11-07T22:36:44.204644 #7468]  INFO -- : (0.000283s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:36:44.204855 #7468]  INFO -- : (0.000113s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:36:44.204988 #7468]  INFO -- : (0.000094s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:36:44.206522 #7468]  INFO -- : (0.001195s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:36:44.210888 #7468]  INFO -- : (0.003283s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-07T22:36:44.214472 #7468]  INFO -- : (0.002198s) 
+        SELECT
+          t.relname AS table_name,
+          i.relname AS index_name,
+          array_to_string(array_agg(a.attname), ', ') AS column_names
+        FROM
+          pg_class t, pg_class i, pg_index ix, pg_attribute a
+        WHERE
+          t.oid = ix.indrelid
+          and i.oid = ix.indexrelid
+          and a.attrelid = t.oid
+          and a.attnum = ANY(ix.indkey)
+          and t.relkind = 'r'
+          and t.relname = 'franchisees'
+        GROUP BY
+          t.relname,
+          i.relname
+        ORDER BY
+          t.relname,
+          i.relname;
+      
+I, [2016-11-07T22:44:09.498993 #7851]  INFO -- : (0.000279s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:09.499245 #7851]  INFO -- : (0.000138s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:09.499426 #7851]  INFO -- : (0.000130s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:09.504535 #7851]  INFO -- : (0.000276s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:09.504723 #7851]  INFO -- : (0.000118s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:09.504930 #7851]  INFO -- : (0.000160s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:09.506391 #7851]  INFO -- : (0.001184s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:44:17.159608 #7878]  INFO -- : (0.000295s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:17.159831 #7878]  INFO -- : (0.000118s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:17.160001 #7878]  INFO -- : (0.000120s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:17.164263 #7878]  INFO -- : (0.000234s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:17.164474 #7878]  INFO -- : (0.000145s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:17.164653 #7878]  INFO -- : (0.000130s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:17.166457 #7878]  INFO -- : (0.001511s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:44:25.686035 #7899]  INFO -- : (0.000304s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:25.686255 #7899]  INFO -- : (0.000116s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:25.686422 #7899]  INFO -- : (0.000127s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:25.690560 #7899]  INFO -- : (0.000291s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:25.690805 #7899]  INFO -- : (0.000179s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:25.690960 #7899]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:25.692353 #7899]  INFO -- : (0.001144s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:44:32.716995 #7925]  INFO -- : (0.000333s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:32.717216 #7925]  INFO -- : (0.000121s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:32.717358 #7925]  INFO -- : (0.000103s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:32.723967 #7925]  INFO -- : (0.000294s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:32.724242 #7925]  INFO -- : (0.000164s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:32.724442 #7925]  INFO -- : (0.000156s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:32.725999 #7925]  INFO -- : (0.001217s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:44:53.860057 #7962]  INFO -- : (0.000321s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:53.860319 #7962]  INFO -- : (0.000164s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:53.860504 #7962]  INFO -- : (0.000145s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:53.865273 #7962]  INFO -- : (0.000348s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:44:53.865549 #7962]  INFO -- : (0.000196s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:44:53.865699 #7962]  INFO -- : (0.000106s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:44:53.867998 #7962]  INFO -- : (0.001886s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:45:06.028003 #7991]  INFO -- : (0.000300s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:45:06.028225 #7991]  INFO -- : (0.000112s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:45:06.028372 #7991]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:45:06.032711 #7991]  INFO -- : (0.000254s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:45:06.032888 #7991]  INFO -- : (0.000115s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:45:06.033031 #7991]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:45:06.034460 #7991]  INFO -- : (0.001165s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:46:09.534235 #8093]  INFO -- : (0.000259s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:46:09.534431 #8093]  INFO -- : (0.000104s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:46:09.534568 #8093]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:46:09.538818 #8093]  INFO -- : (0.000239s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:46:09.539007 #8093]  INFO -- : (0.000118s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:46:09.539147 #8093]  INFO -- : (0.000097s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:46:09.540523 #8093]  INFO -- : (0.001112s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:46:47.661658 #8132]  INFO -- : (0.000306s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:46:47.661936 #8132]  INFO -- : (0.000181s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:46:47.662101 #8132]  INFO -- : (0.000113s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:46:47.666239 #8132]  INFO -- : (0.000302s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:46:47.666495 #8132]  INFO -- : (0.000181s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:46:47.666630 #8132]  INFO -- : (0.000096s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:46:47.668101 #8132]  INFO -- : (0.001217s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:47:19.405802 #8171]  INFO -- : (0.000261s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:47:19.406022 #8171]  INFO -- : (0.000114s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:47:19.406181 #8171]  INFO -- : (0.000109s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:47:19.410506 #8171]  INFO -- : (0.000290s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:47:19.410701 #8171]  INFO -- : (0.000127s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:47:19.410841 #8171]  INFO -- : (0.000100s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:47:19.412243 #8171]  INFO -- : (0.001129s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:47:27.568288 #8198]  INFO -- : (0.000264s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:47:27.568490 #8198]  INFO -- : (0.000103s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:47:27.568623 #8198]  INFO -- : (0.000092s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:47:27.572926 #8198]  INFO -- : (0.000292s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:47:27.573182 #8198]  INFO -- : (0.000179s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:47:27.573316 #8198]  INFO -- : (0.000096s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:47:27.574765 #8198]  INFO -- : (0.001182s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:47:27.579484 #8198]  INFO -- : (0.003537s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-07T22:58:37.695827 #8198]  INFO -- : (0.002083s) 
+        SELECT
+          t.relname AS table_name,
+          i.relname AS index_name,
+          array_to_string(array_agg(a.attname), ', ') AS column_names
+        FROM
+          pg_class t, pg_class i, pg_index ix, pg_attribute a
+        WHERE
+          t.oid = ix.indrelid
+          and i.oid = ix.indexrelid
+          and a.attrelid = t.oid
+          and a.attnum = ANY(ix.indkey)
+          and t.relkind = 'r'
+          and t.relname = 'franchisees'
+        GROUP BY
+          t.relname,
+          i.relname
+        ORDER BY
+          t.relname,
+          i.relname;
+      
+I, [2016-11-07T22:58:40.743298 #8465]  INFO -- : (0.000303s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:58:40.743532 #8465]  INFO -- : (0.000130s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:58:40.743670 #8465]  INFO -- : (0.000098s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:58:40.748325 #8465]  INFO -- : (0.000311s) SET standard_conforming_strings = ON
+I, [2016-11-07T22:58:40.748582 #8465]  INFO -- : (0.000143s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T22:58:40.748762 #8465]  INFO -- : (0.000127s) SET DateStyle = 'ISO'
+I, [2016-11-07T22:58:40.751014 #8465]  INFO -- : (0.001859s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T22:58:40.755104 #8465]  INFO -- : (0.002807s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-07T22:58:49.103765 #8465]  INFO -- : (0.002680s) 
+        SELECT
+          t.relname AS table_name,
+          i.relname AS index_name,
+          array_to_string(array_agg(a.attname), ', ') AS column_names
+        FROM
+          pg_class t, pg_class i, pg_index ix, pg_attribute a
+        WHERE
+          t.oid = ix.indrelid
+          and i.oid = ix.indexrelid
+          and a.attrelid = t.oid
+          and a.attnum = ANY(ix.indkey)
+          and t.relkind = 'r'
+          and t.relname = 'franchisees'
+        GROUP BY
+          t.relname,
+          i.relname
+        ORDER BY
+          t.relname,
+          i.relname;
+      
+I, [2016-11-07T23:00:25.261230 #8626]  INFO -- : (0.000404s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:00:25.261594 #8626]  INFO -- : (0.000153s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:00:25.261820 #8626]  INFO -- : (0.000164s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:00:25.266828 #8626]  INFO -- : (0.000217s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:00:25.266996 #8626]  INFO -- : (0.000102s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:00:25.267127 #8626]  INFO -- : (0.000095s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:00:25.268636 #8626]  INFO -- : (0.001250s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:32:19.714688 #9831]  INFO -- : (0.000273s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:32:19.715223 #9831]  INFO -- : (0.000157s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:32:19.715369 #9831]  INFO -- : (0.000105s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:32:19.719904 #9831]  INFO -- : (0.000211s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:32:19.720076 #9831]  INFO -- : (0.000102s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:32:19.720219 #9831]  INFO -- : (0.000100s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:32:19.721714 #9831]  INFO -- : (0.001241s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:32:59.975397 #9892]  INFO -- : (0.000266s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:32:59.975627 #9892]  INFO -- : (0.000134s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:32:59.975848 #9892]  INFO -- : (0.000178s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:32:59.980724 #9892]  INFO -- : (0.000268s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:32:59.980916 #9892]  INFO -- : (0.000122s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:32:59.981056 #9892]  INFO -- : (0.000102s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:32:59.982543 #9892]  INFO -- : (0.001137s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+E, [2016-11-07T23:33:00.001179 #9892] ERROR -- : PG::DependentObjectsStillExist: ERROR:  cannot drop table franchisees because other objects depend on it
+DETAIL:  constraint fk_rails_3afd488981 on table areas depends on table franchisees
+constraint fk_rails_14dbaf92e4 on table note_actions depends on table franchisees
+constraint fk_rails_fd02ea8c73 on table note_types depends on table franchisees
+constraint fk_rails_9ff550c7bc on table providing_packages depends on table franchisees
+constraint fk_rails_19d13bbfc7 on table registered_packages depends on table franchisees
+constraint fk_rails_47466ffd6e on table registered_services depends on table franchisees
+constraint fk_rails_ebac7923f1 on table reviews depends on table franchisees
+constraint fk_rails_7821e1f291 on table role_assignments depends on table franchisees
+constraint fk_rails_ccaf734846 on table staffs depends on table franchisees
+constraint fk_rails_9401879f56 on table transactions depends on table franchisees
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.: DROP TABLE IF EXISTS franchisees
+I, [2016-11-07T23:33:18.962323 #9914]  INFO -- : (0.000264s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:33:18.962524 #9914]  INFO -- : (0.000105s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:33:18.962664 #9914]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:33:18.966875 #9914]  INFO -- : (0.000266s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:33:18.967066 #9914]  INFO -- : (0.000120s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:33:18.967203 #9914]  INFO -- : (0.000100s) SET DateStyle = 'ISO'
+E, [2016-11-07T23:33:18.967875 #9914] ERROR -- : PG::UndefinedTable: ERROR:  relation "franchisees345" does not exist
+LINE 1: SELECT NULL AS "nil" FROM "franchisees345" LIMIT 1
+                                  ^: SELECT NULL AS "nil" FROM "franchisees345" LIMIT 1
+I, [2016-11-07T23:33:45.476715 #9948]  INFO -- : (0.000372s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:33:45.476933 #9948]  INFO -- : (0.000120s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:33:45.477070 #9948]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:33:45.481283 #9948]  INFO -- : (0.000220s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:33:45.481451 #9948]  INFO -- : (0.000100s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:33:45.481577 #9948]  INFO -- : (0.000091s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:33:45.483212 #9948]  INFO -- : (0.001370s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:33:45.484057 #9948]  INFO -- : (0.000333s) DROP TABLE IF EXISTS franchisees345
+I, [2016-11-07T23:36:05.565573 #10023]  INFO -- : (0.000409s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:36:05.565865 #10023]  INFO -- : (0.000140s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:36:05.566078 #10023]  INFO -- : (0.000153s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:36:05.570422 #10023]  INFO -- : (0.000292s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:36:05.570644 #10023]  INFO -- : (0.000144s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:36:05.570777 #10023]  INFO -- : (0.000096s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:36:05.572238 #10023]  INFO -- : (0.001172s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:36:05.572990 #10023]  INFO -- : (0.000324s) DROP TABLE IF EXISTS franchisees345
+E, [2016-11-07T23:36:05.579279 #10023] ERROR -- : PG::UndefinedObject: ERROR:  type "mediumint" does not exist
+LINE 1: CREATE TABLE franchisees345(id mediumint, name varchar, doma...
+                                       ^: CREATE TABLE franchisees345(id mediumint, name varchar, domain varchar, created_at datetime, updated_at datetime, locale varchar, timezone varchar, credit_point double, deleted_at datetime, country_id mediumint, payment varchar, hotline varchar);
+I, [2016-11-07T23:38:13.502107 #10107]  INFO -- : (0.000336s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:38:13.502326 #10107]  INFO -- : (0.000121s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:38:13.502465 #10107]  INFO -- : (0.000101s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:38:13.506637 #10107]  INFO -- : (0.000257s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:38:13.506846 #10107]  INFO -- : (0.000134s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:38:13.507050 #10107]  INFO -- : (0.000159s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:38:13.509239 #10107]  INFO -- : (0.001850s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:38:13.510539 #10107]  INFO -- : (0.000532s) DROP TABLE IF EXISTS franchisees345
+E, [2016-11-07T23:38:13.511161 #10107] ERROR -- : PG::UndefinedObject: ERROR:  type "datetime" does not exist
+LINE 1: ...ame varchar(255), domain varchar(255), created_at datetime, ...
+                                                             ^: CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));
+I, [2016-11-07T23:40:49.019248 #10207]  INFO -- : (0.000295s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:40:49.019453 #10207]  INFO -- : (0.000104s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:40:49.019593 #10207]  INFO -- : (0.000099s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:40:49.025336 #10207]  INFO -- : (0.000231s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:40:49.025516 #10207]  INFO -- : (0.000109s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:40:49.025646 #10207]  INFO -- : (0.000093s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:40:49.027270 #10207]  INFO -- : (0.001359s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:40:49.027985 #10207]  INFO -- : (0.000303s) DROP TABLE IF EXISTS franchisees345
+E, [2016-11-07T23:40:55.364128 #10207] ERROR -- : PG::UndefinedObject: ERROR:  type "datetime" does not exist
+LINE 1: ...ame varchar(255), domain varchar(255), created_at datetime, ...
+                                                             ^: CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));
+I, [2016-11-07T23:41:16.399760 #10243]  INFO -- : (0.000309s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:41:16.400004 #10243]  INFO -- : (0.000148s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:41:16.400142 #10243]  INFO -- : (0.000100s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:41:16.598107 #10243]  INFO -- : (0.001452s) SET @@wait_timeout = 2147483
+I, [2016-11-07T23:41:16.598247 #10243]  INFO -- : (0.000074s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T23:41:16.599759 #10243]  INFO -- : (0.001254s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:41:16.600955 #10243]  INFO -- : (0.000770s) DROP TABLE IF EXISTS franchisees345
+I, [2016-11-07T23:41:21.082740 #10243]  INFO -- : (0.015848s) CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));
+I, [2016-11-07T23:43:11.104660 #10368]  INFO -- : (0.000283s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:43:11.104892 #10368]  INFO -- : (0.000133s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:43:11.105103 #10368]  INFO -- : (0.000167s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:43:11.301108 #10368]  INFO -- : (0.000640s) SET @@wait_timeout = 2147483
+I, [2016-11-07T23:43:11.301278 #10368]  INFO -- : (0.000103s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T23:43:11.303125 #10368]  INFO -- : (0.001366s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:43:11.310310 #10368]  INFO -- : (0.006743s) DROP TABLE IF EXISTS franchisees345
+I, [2016-11-07T23:43:18.734694 #10368]  INFO -- : (0.014694s) CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));
+E, [2016-11-07T23:43:37.080286 #10368] ERROR -- : Mysql::ServerError::TableExistsError: Table 'franchisees345' already exists: CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));
+I, [2016-11-07T23:47:03.698640 #10528]  INFO -- : (0.000376s) SET standard_conforming_strings = ON
+I, [2016-11-07T23:47:03.699004 #10528]  INFO -- : (0.000151s) SET client_min_messages = 'WARNING'
+I, [2016-11-07T23:47:03.699192 #10528]  INFO -- : (0.000129s) SET DateStyle = 'ISO'
+I, [2016-11-07T23:47:03.883044 #10528]  INFO -- : (0.000635s) SET @@wait_timeout = 2147483
+I, [2016-11-07T23:47:03.883274 #10528]  INFO -- : (0.000130s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T23:47:03.884908 #10528]  INFO -- : (0.001335s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-07T23:47:03.890631 #10528]  INFO -- : (0.005320s) DROP TABLE IF EXISTS franchisees345
+I, [2016-11-07T23:47:03.900143 #10528]  INFO -- : (0.009389s) CREATE TABLE franchisees345(id integer, name varchar(255), domain varchar(255), created_at datetime, updated_at datetime, locale varchar(255), timezone varchar(5), credit_point double, deleted_at datetime, country_id integer, payment text, hotline varchar(255));

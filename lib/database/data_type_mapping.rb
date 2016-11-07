@@ -55,6 +55,7 @@ module Database
       "text": "text",
       "char": "char",
       "varchar": "varchar",
+      "character varying": "varchar",
 
       "bytea": "blob",
 

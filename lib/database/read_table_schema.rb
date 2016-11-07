@@ -1,5 +1,3 @@
-require 'pry'
-
 module Database
   module ReadTableSchema
 
@@ -16,7 +14,6 @@ module Database
       json_hash.merge!(
         "columns": columns
       )
-
       # read_indexes
       indexes = Database::ReadIndexes.read(db, options)
       json_hash.merge(

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    json (2.0.2)
     pg (0.19.0)
     ruby-mysql (2.9.14)
     sequel (4.40.0)
@@ -9,6 +10,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  json
   pg
   ruby-mysql
   sequel

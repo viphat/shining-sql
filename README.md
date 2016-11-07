@@ -73,16 +73,19 @@ ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user1 -s passwo
 ### To do list
 
 - ~~Build Options Parser to read parameters from command line.~~
-- ~~Using Sequel to connect to source db and destination db.~~
-- ~~Using Sequel to read schema from source table.~~
-- ~~Mapping data type from MySQL to Postgres and vice versa.~~ (Need Improve)
-- Using Sequel to read indexes from source table.
-- Using Sequel to read schema from JSON file.
-- Using Sequel to create table in Destination db.
+- ~~Use Sequel to connect to source db and destination db.~~
+- ~~Use Sequel to read schema from source table.~~
+- ~~Map data type from MySQL to Postgres and vice versa.~~ (Need Improve)
+- Improve Data Mapping between MySQL/Postgres.
+ - Based on many scripts & documents such as:
+  - https://github.com/AnatolyUss/FromMySqlToPostgreSql
+  - https://dev.mysql.com/doc/workbench/en/wb-migration-database-postgresql-typemapping.html)
+- ~~Using Sequel to read indexes from source table.~~
+- ~~Read schema from JSON file.~~
+- Use Sequel to create table in Destination db (MySQL).
+- Use Sequel to create table in Destination db (Postgres).
 - Execute query to export data from source table to CSV file.
 - Import data to destination table from CSV file.
+- Implement Data hot-swap strategy.
+- Handle exceptions.
 - Write what's happening to history log.
-- Improving Data Mapping between MySQL/Postgres.
-  - Based on many scripts & documents such as:
-    - https://github.com/AnatolyUss/FromMySqlToPostgreSql
-    - https://dev.mysql.com/doc/workbench/en/wb-migration-database-postgresql-typemapping.html)
