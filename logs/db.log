@@ -1,4 +1,3 @@
-
 I, [2016-11-05T14:37:00.223803 #3038]  INFO -- : (0.000547s) SET standard_conforming_strings = ON
 I, [2016-11-05T14:37:00.224036 #3038]  INFO -- : (0.000129s) SET client_min_messages = 'WARNING'
 I, [2016-11-05T14:37:00.224196 #3038]  INFO -- : (0.000121s) SET DateStyle = 'ISO'
@@ -64,3 +63,52 @@ I, [2016-11-05T16:10:51.297808 #6330]  INFO -- : (0.000164s) SET client_min_mess
 I, [2016-11-05T16:10:51.297990 #6330]  INFO -- : (0.000135s) SET DateStyle = 'ISO'
 I, [2016-11-05T16:10:51.299550 #6330]  INFO -- : (0.001142s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
 I, [2016-11-05T16:10:51.303909 #6330]  INFO -- : (0.003162s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-05T16:37:14.335226 #7394]  INFO -- : (0.000262s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:37:14.335773 #7394]  INFO -- : (0.000154s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:37:14.335946 #7394]  INFO -- : (0.000124s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:37:42.068866 #7436]  INFO -- : (0.000339s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:37:42.069101 #7436]  INFO -- : (0.000134s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:37:42.069267 #7436]  INFO -- : (0.000122s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:37:42.070954 #7436]  INFO -- : (0.001255s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:38:12.896037 #7472]  INFO -- : (0.000276s) SET standard_conforming_strings = ON
+I, [2016-11-05T16:38:12.896278 #7472]  INFO -- : (0.000138s) SET client_min_messages = 'WARNING'
+I, [2016-11-05T16:38:12.896453 #7472]  INFO -- : (0.000126s) SET DateStyle = 'ISO'
+I, [2016-11-05T16:38:12.898850 #7472]  INFO -- : (0.001982s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-05T16:38:12.904142 #7472]  INFO -- : (0.003340s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-06T09:51:47.059026 #4701]  INFO -- : (0.033953s) SET standard_conforming_strings = ON
+I, [2016-11-06T09:51:47.059527 #4701]  INFO -- : (0.000365s) SET client_min_messages = 'WARNING'
+I, [2016-11-06T09:51:47.059727 #4701]  INFO -- : (0.000135s) SET DateStyle = 'ISO'
+I, [2016-11-06T09:51:47.088938 #4701]  INFO -- : (0.028700s) SELECT NULL AS "nil" FROM "franchisees" LIMIT 1
+I, [2016-11-06T09:51:47.117062 #4701]  INFO -- : (0.025881s) SELECT "pg_attribute"."attname" AS "name", CAST("pg_attribute"."atttypid" AS integer) AS "oid", CAST("basetype"."oid" AS integer) AS "base_oid", format_type("basetype"."oid", "pg_type"."typtypmod") AS "db_base_type", format_type("pg_type"."oid", "pg_attribute"."atttypmod") AS "db_type", pg_get_expr("pg_attrdef"."adbin", "pg_class"."oid") AS "default", NOT "pg_attribute"."attnotnull" AS "allow_null", COALESCE(("pg_attribute"."attnum" = ANY("pg_index"."indkey")), false) AS "primary_key" FROM "pg_class" INNER JOIN "pg_attribute" ON ("pg_attribute"."attrelid" = "pg_class"."oid") INNER JOIN "pg_type" ON ("pg_type"."oid" = "pg_attribute"."atttypid") LEFT OUTER JOIN "pg_type" AS "basetype" ON ("basetype"."oid" = "pg_type"."typbasetype") LEFT OUTER JOIN "pg_attrdef" ON (("pg_attrdef"."adrelid" = "pg_class"."oid") AND ("pg_attrdef"."adnum" = "pg_attribute"."attnum")) LEFT OUTER JOIN "pg_index" ON (("pg_index"."indrelid" = "pg_class"."oid") AND ("pg_index"."indisprimary" IS TRUE)) WHERE (("pg_attribute"."attisdropped" IS FALSE) AND ("pg_attribute"."attnum" > 0) AND ("pg_class"."oid" = CAST(CAST('"franchisees"' AS regclass) AS oid))) ORDER BY "pg_attribute"."attnum"
+I, [2016-11-06T11:16:29.816558 #1496]  INFO -- : (0.001395s) SET @@wait_timeout = 2147483
+I, [2016-11-06T11:16:29.816708 #1496]  INFO -- : (0.000072s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-06T11:16:29.817377 #1496]  INFO -- : (0.000334s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-06T11:16:29.818149 #1496]  INFO -- : (0.000593s) DESCRIBE `user`
+I, [2016-11-06T11:17:25.496484 #1718]  INFO -- : (0.000711s) SET @@wait_timeout = 2147483
+I, [2016-11-06T11:17:25.496688 #1718]  INFO -- : (0.000125s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-06T11:17:25.497467 #1718]  INFO -- : (0.000374s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-06T11:17:25.498387 #1718]  INFO -- : (0.000683s) DESCRIBE `user`
+I, [2016-11-07T20:34:56.206009 #2065]  INFO -- : (0.014034s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:34:56.206513 #2065]  INFO -- : (0.000184s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:34:56.223360 #2065]  INFO -- : (0.016190s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:34:56.232447 #2065]  INFO -- : (0.008807s) DESCRIBE `user`
+I, [2016-11-07T20:35:17.839872 #2105]  INFO -- : (0.000488s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:35:17.840053 #2105]  INFO -- : (0.000105s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:35:17.840702 #2105]  INFO -- : (0.000305s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:35:17.841459 #2105]  INFO -- : (0.000582s) DESCRIBE `user`
+I, [2016-11-07T20:36:25.618543 #2189]  INFO -- : (0.000502s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:36:25.618752 #2189]  INFO -- : (0.000125s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:36:25.619502 #2189]  INFO -- : (0.000373s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:36:25.620433 #2189]  INFO -- : (0.000712s) DESCRIBE `user`
+I, [2016-11-07T20:37:57.920204 #2402]  INFO -- : (0.000537s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:37:57.920512 #2402]  INFO -- : (0.000155s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:37:57.921219 #2402]  INFO -- : (0.000317s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:37:57.921987 #2402]  INFO -- : (0.000591s) DESCRIBE `user`
+I, [2016-11-07T20:52:15.132217 #2840]  INFO -- : (0.000785s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:52:15.132690 #2840]  INFO -- : (0.000116s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:52:15.133370 #2840]  INFO -- : (0.000301s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:52:15.134125 #2840]  INFO -- : (0.000581s) DESCRIBE `user`
+I, [2016-11-07T20:52:48.335322 #2953]  INFO -- : (0.000490s) SET @@wait_timeout = 2147483
+I, [2016-11-07T20:52:48.335496 #2953]  INFO -- : (0.000099s) SET SQL_AUTO_IS_NULL=0
+I, [2016-11-07T20:52:48.336136 #2953]  INFO -- : (0.000309s) SELECT NULL AS `nil` FROM `user` LIMIT 1
+I, [2016-11-07T20:52:48.336874 #2953]  INFO -- : (0.000563s) DESCRIBE `user`

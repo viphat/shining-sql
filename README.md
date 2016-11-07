@@ -60,7 +60,7 @@ Using **Sequel** (and its dependencies like ruby-mysql, pg...) to interact with 
 
 ```
 
-ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user -q postgres -k localhost -o 5432 -c db2 -i user -t table1 -r table2
+ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 123456 -q postgres -k localhost -o 5432 -c db2 -i user -t user -r table2
 
 ```
 
@@ -69,10 +69,11 @@ ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user -q postgre
 - ~~Build Options Parser to read parameters from command line.~~
 - ~~Using Sequel to connect to source db and destination db.~~
 - ~~Using Sequel to read schema from source table.~~
-- Mapping data type from MySQL to Postgres and vice versa.
+- ~~Mapping data type from MySQL to Postgres and vice versa.~~ (Need Improve)
 - Using Sequel to read indexes from source Table.
 - Using Sequel to read schema from JSON File.
 - Using Sequel to create table in Destination db.
 - Execute query to export data from source table to CSV file.
 - Import data to destination table from CSV file.
 - Write what's happening to history log.
+- Improving Data Mapping between MySQL/Postgres. (Based on many scripts & documents such as: https://github.com/AnatolyUss/FromMySqlToPostgreSql)
