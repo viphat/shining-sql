@@ -82,9 +82,9 @@ ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user1 -s passwo
   - https://dev.mysql.com/doc/workbench/en/wb-migration-database-postgresql-typemapping.html)
 - ~~Using Sequel to read indexes from source table.~~
 - ~~Read schema from JSON file.~~
-- Use Sequel to create table in Destination db (MySQL).
-- Use Sequel to create table in Destination db (Postgres).
-- Execute query to export data from source table to CSV file.
+- ~~Use Sequel to create table in Destination db (MySQL).~~
+- ~~Use Sequel to create table in Destination db (Postgres).~~
+- ~~Execute query to export data from source table to CSV file.~~
 - Import data to destination table from CSV file.
 - Implement Data hot-swap strategy.
 - Handle exceptions.

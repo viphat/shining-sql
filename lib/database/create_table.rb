@@ -1,25 +1,27 @@
-require 'pry'
-
 module Database
   module CreateTable
 
     def self.create_table(db, options, schema_hash)
       # Drop Table in Destination DB if exists
-      Database::CreateTable.drop_table_if_exists(db, options.destination_table_name)
-      query = Database::CreateTable.generate_create_table_syntax(options, schema_hash)
       begin
+        query = Database::CreateTable.drop_table_if_exists(options.destination_table_name)
+        query += """
+          #{Database::CreateTable.generate_create_table_syntax(options.destination_table_name, schema_hash)}
+        """
         db.run(query)
-      rescue Exception
+      rescue Exception => ex
+        puts ex
+        puts 'Has error in create table'
         exit
       end
     end
 
-    def self.drop_table_if_exists(db, table_name)
-      db.run("DROP TABLE IF EXISTS #{table_name}")
+    def self.drop_table_if_exists(table_name)
+      "DROP TABLE IF EXISTS #{table_name};"
     end
 
-    def self.generate_create_table_syntax(options, schema_hash)
-      query = "CREATE TABLE #{options.destination_table_name}("
+    def self.generate_create_table_syntax(table_name, schema_hash)
+      query = "CREATE TABLE #{table_name}("
       cols = []
 
       schema_hash["columns"].each do |col|

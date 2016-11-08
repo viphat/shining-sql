@@ -1,14 +1,19 @@
 require 'json'
 Dir["./lib/**/*.rb"].each { |file| require file }
 
-OUTPUT_SCHEMAS_FOLDER = "./output/schemas/"
+=begin
+ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 123456 -q postgres -k localhost -o 5432 -c viphat -i viphat -t user -r user
+ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d ut1022 -u viphat -q mysql -k localhost -o 3306 -c utalents -i root -x 123456 -t franchisees -r franchisees345 -f ./tmp/franchisee.json
+=end
 
-timestamp = Time.now.strftime("%Y%m%d%H%M")
+OUTPUT_SCHEMAS_FOLDER = "#{Dir.pwd}/output/schemas"
+OUTPUT_DATA_FOLDER = "#{Dir.pwd}/output/data"
+
+timestamp = Time.now.strftime("%Y%m%d%H%M%S")
 
 options = Helpers::ReadOptions.parse!
-puts options.inspect
 
-src_connection_string = Helpers::ShiningSql.build_connection_string(
+src_connection_string = Helpers::Common.build_connection_string(
   options.source_adapter, options.source_host, options.source_port,
   options.source_database, options.source_username, options.source_password
 )
@@ -16,7 +21,7 @@ src_connection_string = Helpers::ShiningSql.build_connection_string(
 src_db = Database::Connection.connect!(src_connection_string)
 exit unless src_db.test_connection
 
-des_connection_string = Helpers::ShiningSql.build_connection_string(
+des_connection_string = Helpers::Common.build_connection_string(
   options.destination_adapter, options.destination_host, options.destination_port,
   options.destination_database, options.destination_username, options.destination_password
 )
@@ -52,6 +57,9 @@ if json_file.nil?
 end
 
 schema_hash = Helpers::ReadJson.read_json_file(json_file)
-puts JSON.pretty_generate(schema_hash)
 
 Database::CreateTable.create_table(des_db, options, schema_hash)
+
+output_file = "#{OUTPUT_DATA_FOLDER}/#{options.source_table_name}-#{timestamp}.csv"
+Database::ExportData.export!(src_db, options, output_file, schema_hash)
+puts output_file
