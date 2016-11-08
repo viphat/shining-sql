@@ -6,6 +6,7 @@ module Database
       "smallint": "smallint",
       "mediumint": "integer",
       "bigint": "bigint",
+      "int": "integer",
 
       "tinyint unsigned": "smallint",
       "smallint unsigned": "smallint",

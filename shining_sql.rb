@@ -1,9 +1,12 @@
 require 'json'
+require 'pry'
 Dir["./lib/**/*.rb"].each { |file| require file }
 
 =begin
 ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d grokking -u root -s 123456 -q postgres -k localhost -o 5432 -c viphat -i viphat -t user -r user
 ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d ut1022 -u viphat -q mysql -k localhost -o 3306 -c utalents -i root -x 123456 -t franchisees -r franchisees345 -f ./tmp/franchisee.json
+
+ruby ./shining_sql.rb -a mysql -j localhost -p 3306 -d utalents -u root -s 123456 -q postgres -k localhost -o 5432 -c ut1022 -i viphat -t franchisees345 -r franchisees556 -f ./tmp/franchisee.json
 =end
 
 OUTPUT_SCHEMAS_FOLDER = "#{Dir.pwd}/output/schemas"
@@ -64,3 +67,5 @@ output_file = "#{OUTPUT_DATA_FOLDER}/#{options.source_table_name}-#{timestamp}.c
 Database::ExportData.export!(src_db, options, output_file, schema_hash)
 
 Database::ImportData.import!(des_db, options, output_file)
+
+Database::CreateIndexes.create_indexes!(des_db, options, schema_hash)

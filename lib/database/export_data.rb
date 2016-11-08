@@ -5,7 +5,7 @@ module Database
   module ExportData
 
     def self.export!(db, options, output_file, schema_hash)
-      columns = self.get_columns(schema_hash)
+      columns = self.get_columns(options, schema_hash)
       if options.source_adapter == 'mysql'
         # export output file to /tmp then copy it to output_folder
         tmp_output_file = "/tmp/#{File.basename(output_file)}"
@@ -15,11 +15,17 @@ module Database
       db.run(self.get_postgres_query_string(options.source_table_name, columns, output_file))
     end
 
-    def self.get_columns(schema_hash)
+    def self.get_columns(options, schema_hash)
       output = []
       schema_hash["columns"].each do |column|
-        # TODO - Improvement - handle NULL values
-        output.push(column['column_name'])
+        output.push(
+          if options.source_adapter == 'mysql'
+            # "IFNULL(#{column['column_name']}, '\\N')"
+            column['column_name']
+          else
+            column['column_name']
+          end
+        )
       end
       output.join(", ")
     end
@@ -31,14 +37,13 @@ module Database
         INTO OUTFILE '#{tmp_output_file}'
         FIELDS ENCLOSED BY '\"'
         TERMINATED BY ','
-        ESCAPED BY '\"' LINES
-        TERMINATED BY '\r\n';
+        LINES TERMINATED BY '\r\n';
       """
     end
 
     def self.get_postgres_query_string(table_name, columns, output_file)
       """
-        COPY (SELECT #{columns} FROM #{table_name}) TO '#{output_file}' WITH(NULL'\\N', DELIMITER ',', FORCE_QUOTE *, FORMAT CSV);
+        COPY (SELECT #{columns} FROM #{table_name}) TO '#{output_file}' WITH(NULL '\\N', DELIMITER ',', FORCE_QUOTE *, FORMAT CSV);
       """
     end
 

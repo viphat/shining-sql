@@ -2,7 +2,6 @@ module Database
   module ReadTableSchema
 
     def self.read_from_db(db, options, json_hash)
-
       # read_columns
       columns = []
       db.schema(options.source_table_name).each do |column|

@@ -22,7 +22,7 @@ module Database
 
     def self.import_postgres_query(table_name, file)
       """
-        COPY #{table_name} FROM '#{file}' WITH(DELIMITER ',', FORMAT CSV);
+        COPY #{table_name} FROM '#{file}' WITH(NULL '\\N', DELIMITER ',', FORMAT CSV);
       """
     end
 
