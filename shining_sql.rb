@@ -62,4 +62,5 @@ Database::CreateTable.create_table(des_db, options, schema_hash)
 
 output_file = "#{OUTPUT_DATA_FOLDER}/#{options.source_table_name}-#{timestamp}.csv"
 Database::ExportData.export!(src_db, options, output_file, schema_hash)
-puts output_file
+
+Database::ImportData.import!(des_db, options, output_file)

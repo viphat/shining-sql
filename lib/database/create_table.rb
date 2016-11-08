@@ -4,10 +4,9 @@ module Database
     def self.create_table(db, options, schema_hash)
       # Drop Table in Destination DB if exists
       begin
-        query = Database::CreateTable.drop_table_if_exists(options.destination_table_name)
-        query += """
-          #{Database::CreateTable.generate_create_table_syntax(options.destination_table_name, schema_hash)}
-        """
+        query = self.drop_table_if_exists(options.destination_table_name)
+        query += "\n"
+        query += self.generate_create_table_syntax(options.destination_table_name, schema_hash)
         db.run(query)
       rescue Exception => ex
         puts ex

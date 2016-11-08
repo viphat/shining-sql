@@ -3,9 +3,9 @@ module Database
 
     def self.read(db, options)
       if (options.source_adapter == 'mysql')
-        Database::ReadIndexes.read_from_mysql(db, options)
+        self.read_from_mysql(db, options)
       else
-        Database::ReadIndexes.read_from_postgres(db, options)
+        self.read_from_postgres(db, options)
       end
     end
 
@@ -14,7 +14,7 @@ module Database
       previous_key = nil
       columns = []
       index = 0
-      db.fetch(Database::ReadIndexes.get_mysql_table_indexes(options.source_table_name)).each do |row|
+      db.fetch(self.get_mysql_table_indexes(options.source_table_name)).each do |row|
         index += 1
         if previous_key == nil || previous_key == row[:Key_name]
           columns.push(row[:Column_name])
@@ -36,7 +36,7 @@ module Database
 
     def self.read_from_postgres(db, options)
       indexes = []
-      db.fetch(Database::ReadIndexes.get_postgres_table_indexes(options.source_table_name)).each do |row|
+      db.fetch(self.get_postgres_table_indexes(options.source_table_name)).each do |row|
         indexes.push({
           "columns": row[:column_names].split(", ")
         })

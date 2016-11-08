@@ -85,7 +85,8 @@ ruby ./shining_sql.rb -a postgres -j localhost -p 5432 -d db1 -u user1 -s passwo
 - ~~Use Sequel to create table in Destination db (MySQL).~~
 - ~~Use Sequel to create table in Destination db (Postgres).~~
 - ~~Execute query to export data from source table to CSV file.~~
-- Import data to destination table from CSV file.
+- ~~Import data to destination table from CSV file.~~
 - Implement Data hot-swap strategy.
+- Create Indexes on destination db.
 - Handle exceptions.
 - Write what's happening to history log.

@@ -1,3 +1,6 @@
+require 'fileutils'
+require 'pry'
+
 module Database
   module ExportData
 
@@ -7,7 +10,7 @@ module Database
         # export output file to /tmp then copy it to output_folder
         tmp_output_file = "/tmp/#{File.basename(output_file)}"
         db.run(self.get_mysql_query_string(options.source_table_name, columns, tmp_output_file))
-        FileUtils.cp(tmp_output_file, output_file) and return
+        return FileUtils.cp(tmp_output_file, output_file)
       end
       db.run(self.get_postgres_query_string(options.source_table_name, columns, output_file))
     end
@@ -35,7 +38,7 @@ module Database
 
     def self.get_postgres_query_string(table_name, columns, output_file)
       """
-        COPY (SELECT #{columns} FROM #{table_name}) TO '#{output_file}' DELIMITER ',' CSV;
+        COPY (SELECT #{columns} FROM #{table_name}) TO '#{output_file}' WITH(NULL'\\N', DELIMITER ',', FORCE_QUOTE *, FORMAT CSV);
       """
     end
 

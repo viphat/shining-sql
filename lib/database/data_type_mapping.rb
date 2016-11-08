@@ -1,5 +1,6 @@
 module Database
   module DataTypeMapping
+    #TODO - Need improve Data Mapping Method
     MYSQL_TO_POSTGRES_DATA_TYPES_MAPPING = {
       "tinyint": "smallint",
       "smallint": "smallint",
@@ -71,12 +72,12 @@ module Database
       return data_type if options.source_adapter == options.destination_adapter
       if options.source_adapter == 'mysql' && options.destination_adapter == 'postgres'
         dkey = data_type
-        Database::DataTypeMapping::MYSQL_TO_POSTGRES_DATA_TYPES_MAPPING.keys.each do |key|
+        MYSQL_TO_POSTGRES_DATA_TYPES_MAPPING.keys.each do |key|
           dkey = key if data_type.downcase.start_with?(key.to_s)
         end
-        Database::DataTypeMapping::MYSQL_TO_POSTGRES_DATA_TYPES_MAPPING[dkey.to_sym]
+        MYSQL_TO_POSTGRES_DATA_TYPES_MAPPING[dkey.to_sym]
       else
-        Database::DataTypeMapping::POSTGRES_TO_MYSQL_DATA_TYPES_MAPPING[data_type.downcase.to_sym]
+        POSTGRES_TO_MYSQL_DATA_TYPES_MAPPING[data_type.downcase.to_sym]
       end
     end
 
